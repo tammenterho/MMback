@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.net.URI;
 
 
-@CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com/", allowedHeaders = "*")
+@CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com", allowedHeaders = "*")
 @RequiredArgsConstructor
 @RestController
 public class AuthController {
