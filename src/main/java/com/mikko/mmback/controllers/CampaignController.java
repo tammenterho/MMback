@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com/", allowedHeaders = "*")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class CampaignController {
 
     @Autowired
@@ -23,20 +23,20 @@ public class CampaignController {
         return "hello";
     }
 
-    @CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com/", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     @GetMapping("/campaigns")
     public List<Campaigns> getCampaigns() {
         List<Campaigns> campaigns = CRepo.findAll();
         return campaigns;
     }
-    @CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com/", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     @PostMapping("/campaigns")
     public ResponseEntity<Campaigns> createCampaign(@RequestBody Campaigns campaigns) {
         Campaigns savedCampaign = CRepo.save(campaigns);
         return ResponseEntity.ok(savedCampaign);
     }
 
-    @CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com/", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     @PutMapping("/campaigns/{id}")
     public ResponseEntity<Campaigns> updateCampaign( @RequestBody Campaigns updatedCampaign, @PathVariable int id
     ) {
@@ -56,7 +56,7 @@ public class CampaignController {
         return ResponseEntity.ok(savedCampaign);
     }
 
-    @CrossOrigin(origins = "https://marketing-scheduler-front-5e784db552ef.herokuapp.com/", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
     @DeleteMapping("/campaigns/{id}")
     public ResponseEntity<Campaigns> deleteCampaign(@PathVariable("id") int id) {
         System.out.println("deleting");
