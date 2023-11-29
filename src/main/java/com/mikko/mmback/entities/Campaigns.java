@@ -29,9 +29,27 @@ public class Campaigns {
     private String adother;
     private String adstatus;
 
+    private String creator;
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
     public Campaigns() {}
 
-    public Campaigns(int id, int owner, String name, String adtitle, String adtext, String adtarget, String adarea, int adbudget, Date adstart, Date adend, String mediainfo, String adurl, String adother, String adstatus) {
+    public String getCompany() {
+        return company;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public Campaigns(int id, int owner, String name, String adtitle, String creator, String adtext, String adtarget, String adarea, int adbudget, Date adstart, Date adend, String mediainfo, String adurl, String adother, String adstatus) {
         this.id = id;
         this.owner = owner;
         this.name = name;
@@ -46,6 +64,7 @@ public class Campaigns {
         this.adurl = adurl;
         this.adother = adother;
         this.adstatus = adstatus;
+        this.creator = creator;
     }
 
     public void setId(int id) {
