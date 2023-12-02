@@ -18,4 +18,5 @@ public class UserDto {
     private String token;
     private String email;
     private String phone;
+    private String company;
 }

@@ -26,6 +26,15 @@ public class User {
 
     private String email;
     private String phone;
+    private String company;
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getCompany() {
+        return company;
+    }
 
     public void setEmail(String email) {
         this.email = email;
