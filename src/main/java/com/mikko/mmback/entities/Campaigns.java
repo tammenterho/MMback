@@ -30,6 +30,15 @@ public class Campaigns {
     private String adstatus;
 
     private String creator;
+    private String adcontact;
+
+    public void setAdcontact(String adcontact) {
+        this.adcontact = adcontact;
+    }
+
+    public String getAdcontact() {
+        return adcontact;
+    }
 
     public void setCompany(String company) {
         this.company = company;
